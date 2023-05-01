@@ -32,7 +32,7 @@ class MaxProfitTest {
 
         @Test
         fun `prices length should not exceed maximum`() {
-            val prices = IntArray(10000) { it }
+            val prices = IntArray(10001) { it }
             val result = MaxProfit.calculate(prices)
             assert(result.isFailure)
         }
