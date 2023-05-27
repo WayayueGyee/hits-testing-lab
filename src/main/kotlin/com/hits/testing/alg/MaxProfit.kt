@@ -9,6 +9,12 @@ class MaxProfit private constructor() {
         private const val PRICES_COST_LOWER_BOUNDARY = 0
         private const val PRICES_COST_UPPER_BOUNDARY = 1000
 
+        /**
+         * @param prices array of prices for which you need to calculate the maximum profit
+         * @return `Result<Int>` indicating if function is succeeded or failed.
+         *
+         * On failure exception in the `Result` is [OutOfBoundException]
+         */
         fun calculate(prices: IntArray): Result<Int> {
             if (prices.size < MIN_PRICES_LEN || prices.size > MAX_PRICES_LEN) return Result.failure(
                 OutOfBoundException("Prices must be in the range from 1 to 10000")
