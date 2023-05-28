@@ -21,9 +21,6 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.junit.jupiter:junit-jupiter:5.8.1")
-	testImplementation("org.seleniumhq.selenium:selenium-java:4.9.1")
-	testImplementation("org.seleniumhq.selenium:selenium-chrome-driver:4.9.1")
-	testImplementation("io.github.bonigarcia:webdrivermanager:5.3.3")
 }
 
 tasks.withType<KotlinCompile> {
