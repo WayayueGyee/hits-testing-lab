@@ -20,7 +20,7 @@ class MaxProfitTest {
             assert(result.isFailure)
             val e = result.exceptionOrNull()
             assert(e is OutOfBoundException)
-            assert(e?.message == "Prices must be in the range from 1 to 10000")
+            assert(e?.message == "Number of prices must be in the range from 1 to 10000")
         }
 
         @Test
@@ -30,7 +30,7 @@ class MaxProfitTest {
             assert(result.isFailure)
             val e = result.exceptionOrNull()
             assert(e is OutOfBoundException)
-            assert(e?.message == "Prices must be in the range from 1 to 10000")
+            assert(e?.message == "Number of prices must be in the range from 1 to 10000")
         }
     }
 

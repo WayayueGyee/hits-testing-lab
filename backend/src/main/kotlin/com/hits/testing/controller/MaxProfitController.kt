@@ -5,16 +5,14 @@ import com.hits.testing.alg.exception.OutOfBoundException
 import com.hits.testing.controller.dto.ProfitDto
 import com.hits.testing.util.LoggerDelegate
 import org.springframework.http.ResponseEntity
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RequestParam
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 
 @RestController
 @RequestMapping("api/alg/max-profit")
 class MaxProfitController {
     private val logger by LoggerDelegate()
 
+    @CrossOrigin(origins = ["*"], exposedHeaders = ["*"])
     @GetMapping("calculate")
     fun calculateProfit(@RequestParam prices: IntArray): ResponseEntity<*> {
         val profitResult = MaxProfit.calculate(prices)

@@ -51,7 +51,7 @@ class MaxProfitControllerTest @Autowired constructor(
                 status { isBadRequest() }
                 content {
                     contentType("text/plain;charset=UTF-8")
-                    string("Prices must be in the range from 1 to 10000")
+                    string("Number of prices must be in the range from 1 to 10000")
                 }
             }
     }
