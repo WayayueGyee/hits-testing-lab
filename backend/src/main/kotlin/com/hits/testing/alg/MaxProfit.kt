@@ -17,7 +17,13 @@ class MaxProfit private constructor() {
          */
         fun calculate(prices: IntArray): Result<Int> {
             if (prices.size < MIN_PRICES_LEN || prices.size > MAX_PRICES_LEN) return Result.failure(
-                OutOfBoundException("Prices must be in the range from 1 to 10000")
+                OutOfBoundException("Number of prices must be in the range from 1 to 10000")
+            )
+
+            if (prices[0] < PRICES_COST_LOWER_BOUNDARY || prices[0] > PRICES_COST_UPPER_BOUNDARY) return Result.failure(
+                OutOfBoundException(
+                    "Prices must be greater than or equal to 0 and less than or equal to 1000"
+                )
             )
 
             var buy = prices[0]
